@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抢购页面</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="qiangGou">
+				<div class="header">
+					<div class="title">
+						<div class="miaoSha left"></div>
+						<div class="nav right" id="menu">
+							<div><a href="index.html">抢购专区</a></div>
+							<div><a href="orderList.html">订单页</a></div>
+							<div id="loginMenu"><a href="javascript:void(0);" onclick="loginOut();">退出</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="con_img">
+						<img src="img/daisen.png" id="goodsImg"/>
+					</div>
+					<div class="con_xiangQing">
+						<p class="con_tit" id="goodsName">双十一戴森进口Supersonic&nbsp;HD01吹风机</p>
+						<p class="con_zhuShi">英国进口&nbsp;12档风温&nbsp;快干大风量</p>
+						<div class="ec_tu" id="ec_tu">
+							<div class="ec_tit">
+								<div class="ec_l">已抢购<span class="bfb"></span></div>
+								<div class="ec_k" id="ec_k">
+									还剩<span class="sz" id="currentStock"></span>个
+								</div>
+							</div>
+							<div class="ec_xian" id="ec_xian">
+								<div class="ec_jinDu"></div>
+							</div>
+							
+						</div>
+						<div class="con_bot">
+							<div class="jiaGe">
+								<span class="x_jiaGe"></span><span class="d_jiaGe"></span>
+							</div>
+							<div class="btn_msq" onclick="qgGoods();">
+								马上抢  
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dialog">
+					<div class="underway">
+						<!--<div style="text-align: right ;width: 100%;"><img src="img/close.png"/></div>-->
+						<div class="page">
+							<div class="loadEffect">
+								<img src="img/chenggong.png" width="100px" height="100px" id="logo"/>
+							</div>
+						</div>
+						<p id="message">抢购中......</p>
+						<span class="daoJiShi" id="isCountDown"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/checkLogin.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>

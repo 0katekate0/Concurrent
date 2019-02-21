@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qg.mapper.QgUserMapper">
+
+    <select id="getQgUserById" resultType="com.qg.pojo.QgUser">
+        select
+                id as id,
+                phone as phone,
+                password as password,
+                wxUserId as wxUserId,
+                realName as realName,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from qg_user
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getQgUserListByMap" resultType="com.qg.pojo.QgUser" parameterType="java.util.Map">
+        select
+                id as id,
+                phone as phone,
+                password as password,
+                wxUserId as wxUserId,
+                realName as realName,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from qg_user
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="wxUserId != null and wxUserId!=''">
+                    and wxUserId=#{wxUserId}
+                </if>
+                <if test="realName != null and realName!=''">
+                    and realName=#{realName}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getQgUserCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from qg_user
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="wxUserId != null and wxUserId!=''">
+                    and wxUserId=#{wxUserId}
+                </if>
+                <if test="realName != null and realName!=''">
+                    and realName=#{realName}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertQgUser" parameterType="com.qg.pojo.QgUser">
+        insert into qg_user(
+                        id,
+                        phone,
+                        password,
+                        wxUserId,
+                        realName,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{id},
+                     #{phone},
+                     #{password},
+                     #{wxUserId},
+                     #{realName},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateQgUser" parameterType="com.qg.pojo.QgUser">
+        update qg_user
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="phone != null and phone!=''">
+                            phone=#{phone},
+                        </if>
+                        <if test="password != null and password!=''">
+                            password=#{password},
+                        </if>
+                        <if test="wxUserId != null and wxUserId!=''">
+                            wxUserId=#{wxUserId},
+                        </if>
+                        <if test="realName != null and realName!=''">
+                            realName=#{realName},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+
+    <delete id="deleteQgUserById" parameterType="String">
+        delete from qg_user where id = #{id}
+    </delete>
+
+    <delete id="batchDeleteQgUser" parameterType="java.util.Map">
+        delete from qg_user where id in (
+            <foreach collection="ids" item="id" separator=",">
+                    #{id}
+            </foreach>
+        )
+    </delete>
+
+    <select id="queryQgUserByPhoneAndPwd" resultType="com.qg.pojo.QgUser" parameterType="java.util.Map">
+        select
+            id as id,
+            phone as phone,
+            wxUserId as wxUserId,
+            realName as realName,
+            createdTime as createdTime,
+            updatedTime as updatedTime
+        from qg_user
+        <trim prefix="where" prefixOverrides="and | or">
+            and phone=#{phone} and password=#{password}
+        </trim>
+    </select>
+</mapper>

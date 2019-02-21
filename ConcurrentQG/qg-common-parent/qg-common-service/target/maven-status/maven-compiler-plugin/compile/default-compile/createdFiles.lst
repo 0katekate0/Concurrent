@@ -1,0 +1,6 @@
+com\qg\service\QgOrderService.class
+com\qg\service\QgUserService.class
+com\qg\service\QgGoodsService.class
+com\qg\service\QgTradeService.class
+com\qg\service\QgGoodsTempStockService.class
+com\qg\service\QgGoodsMessageService.class

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/orderDetail.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="dingDanYe">
+				<div class="header">
+					抢购网——支付中心
+				</div>
+				<div class="content">
+					<div class="tiXing">
+						请在<span	 class="red2">30分钟内</span>完成支付
+					</div>
+					<div class="dingDanXQ">
+						<p>订单详情</p>
+						<div class="dingDan">
+							订单编号：<span class="number"></span><br />
+							订单金额：<span class="price"></span>
+						</div>
+					</div>
+					<div class="dingDanXQ" class="zhiFu">
+						<p>支付方式</p>
+							<input type='hidden' name='WIDout_trade_no' id="orderNo"/>
+							<input type='hidden' name='WIDsubject' id="goodsId">
+							<input type='hidden' name='WIDtotal_amount' id="payAmount">
+							<label class="demo--label">
+							    <input class="demo--radio" type="radio" name="payType" value="1">
+							    <span class="demo--radioInput"></span><img src="img/zhifubao.png" />
+							</label>
+							<label class="demo--label">
+							    <input class="demo--radio" type="radio" name="payType" value="2">
+							    <span class="demo--radioInput"></span><img src="img/weixinzhifu.png" />
+							</label>
+						<p></p>
+					</div>
+				    <div class="btn_zhiFu" id="submitBtnBank">支付</div>
+				</div>
+				<div class="box_kouKuan">
+					<div class="kouKuan">
+						<img src="img/wenti.png" />
+						<p>如已完成扣款，请您点击支付成功</p>
+						<div>
+							<div class="btn_CG" onclick="paySuccess();">
+								支付成功
+							</div>
+							<div class="btn_shiBai" onclick="payFail();">
+								支付失败
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box_wx">
+					<div class="wxQrcode">
+						<p style="margin-top: 10px;">如已完成扣款，请您点击支付成功</p>
+						<div id="qrcode" style="width: 150px;height: 150px;margin-top: 30px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/common.js"></script>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/qrcode.min.js"></script>
+		<script src="js/checkLogin.js"></script>
+		<script src="js/orderDetail.js"></script>
+	</body>
+</html>

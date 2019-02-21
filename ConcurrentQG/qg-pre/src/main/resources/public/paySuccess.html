@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/paySuccess.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="chengGongZhiFu">
+				<div class="header">
+					<div class="title">
+						<div class="miaoSha left"></div>
+						<div class="nav right">
+							<div><a href="index.html">抢购专区</a></div>
+							<div><a href="orderList.html">订单页</a></div>
+							<div id="loginMenu"><a href="javascript:void(0);" onclick="loginOut();">退出</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<img src="img/weixin.png" />
+					<p>您已成功付款￥<span class="x_jiaGe" id="amount"></span>元&nbsp;&nbsp;支付订单号：<span class="zhiFuDingDanHao" id="orderNo"></span></p>
+					<div class="huiShouYe"><a href="index.html">回首页</a></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/checkLogin.js"></script>
+		<script src="js/paySuccess.js"></script>
+	</body>
+</html>

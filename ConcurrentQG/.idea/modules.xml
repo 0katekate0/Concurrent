@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qg-common-parent/qg-common-dto/qg-common-dto.iml" filepath="$PROJECT_DIR$/qg-common-parent/qg-common-dto/qg-common-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-parent/qg-common-module/qg-common-module.iml" filepath="$PROJECT_DIR$/qg-common-parent/qg-common-module/qg-common-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-parent/qg-common-parent.iml" filepath="$PROJECT_DIR$/qg-common-parent/qg-common-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-parent/qg-common-service/qg-common-service.iml" filepath="$PROJECT_DIR$/qg-common-parent/qg-common-service/qg-common-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-parent/qg-common-utils/qg-common-utils.iml" filepath="$PROJECT_DIR$/qg-common-parent/qg-common-utils/qg-common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-goods-consumer/qg-goods-consumer.iml" filepath="$PROJECT_DIR$/qg-goods-consumer/qg-goods-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-goods-provider/qg-goods-provider.iml" filepath="$PROJECT_DIR$/qg-goods-provider/qg-goods-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-order-consumer/qg-order-consumer.iml" filepath="$PROJECT_DIR$/qg-order-consumer/qg-order-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-order-provider/qg-order-provider.iml" filepath="$PROJECT_DIR$/qg-order-provider/qg-order-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-pay-consumer/qg-pay-consumer.iml" filepath="$PROJECT_DIR$/qg-pay-consumer/qg-pay-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-pay-provider/qg-pay-provider.iml" filepath="$PROJECT_DIR$/qg-pay-provider/qg-pay-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/qg8-9基于ActiveMQ、Redis-setnx实现高效有序抢购.iml" filepath="$PROJECT_DIR$/.idea/qg8-9基于ActiveMQ、Redis-setnx实现高效有序抢购.iml" />
+    </modules>
+  </component>
+</project>

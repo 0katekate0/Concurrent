@@ -1,0 +1,82 @@
+			html{
+				height: 100%;
+			}
+			body{
+				height: 100%;
+			}
+			.box{
+				width:100%;
+				height: 100%;
+			}
+			.chengGongZhiFu{
+				width:100%;
+				height:100%;
+				background:#F3F3F3;
+				position: relative;
+			}
+			.header{
+				width: 100%;
+				height: 56px;
+				background:#E53140;
+			}
+			.title{
+				width:80%;
+				height: 56px;
+				margin: 0 auto;
+			}
+			.miaoSha{
+				width:51px;
+				height: 30px;
+				background:url(../img/Bitmap.png) no-repeat;
+				background-size:51px 30px;
+				margin-top: 13px;
+			}
+			.nav{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				height:56px;
+			}
+			.nav>div{
+				margin-left: 30px;
+			}
+			.nav>div a{
+				color: #FFFFFF;
+				font-size: 14px;
+				line-height:56px;
+			}
+			.content{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width:100%;
+				height:70%;
+			}
+			.content>img{
+				width: 68px;
+				height: 60px;
+				display: block;
+				margin:10% 0 28px;
+			}
+			.content>p{
+				font-size: 20px;
+				color: #444444;
+				text-align: center;
+				line-height: 28px;
+			}
+			.content>.huiShouYe{
+				width: 140px;
+				height:40px;
+				margin-top:62px;
+				text-align: center;
+				line-height:40px;
+				background: #E53140;
+				border-radius: 4px;
+			}
+			.content>.huiShouYe a{
+				width: 140px;
+				height:40px;
+				display: block;
+				color: #FFFFFF;
+				font-size: 16px;
+			}

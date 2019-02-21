@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录页面</title>
+		<link  rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="dly">
+				<div class="dly_left"></div>
+				<div class="dly_right">
+					<p class="tit">登陆验证</p>
+						<div class="zc_username">
+							<span class="zc_tit">用户名</span>
+							<input type="text" id="userName" name="userName" class="username" />
+							<!-- for="email"-->
+						</div>
+						<div class="zc_password">
+							<span class="zc_tit">密&nbsp;&nbsp;&nbsp;码</span>
+							<input type="password" id="password" name="password" class="pass_word" />
+							<!-- for="email"-->
+							<label class="error" id="pass_word_error"></label>
+						</div>
+						<button id="btn-ty" class="btn-ty" onclick="login.doLogin();">登录</button>
+					<p class="thirdParty_tit">第三方登录</p>
+					<div class="box_thirdParty">
+						<div class="weiXin">
+							<a href="javascript:void(0);" onclick="login.wxLogin();"><img src="img/wechat.png"/></a>
+						</div>
+						<div class="qq">
+							<img src="img/qq.png" />
+						</div>
+						<div class="weiBo">
+							<img src="img/Page.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/login.js"></script>
+	</body>
+</html>

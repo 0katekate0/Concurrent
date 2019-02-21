@@ -1,0 +1,146 @@
+			html{
+				height: 100%;
+			}
+			body{
+				height: 100%;
+			}
+			.box{
+				width:100%;
+				height: 100%;
+			}
+			.qiangGou{
+				width:100%;
+				height: 640px;
+				margin:0px auto 0;
+				background:#F3F3F3;
+				height: 100%;
+			}
+			.header{
+				width:100%;
+				height: 56px;
+				background:#E53140;
+			}
+			.title{
+				width:80%;
+				height: 56px;
+				margin: 0 auto;
+			}
+			.miaoSha{
+				width:51px;
+				height: 30px;
+				background:url(../img/Bitmap.png) no-repeat;
+				background-size:51px 30px;
+				margin-top: 13px;
+			}
+			.nav{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				height:56px;
+			}
+			.nav>div{
+				margin-left: 30px;
+			}
+			.nav>div a{
+				color: #FFFFFF;
+				font-size: 14px;
+				line-height:56px;
+			}
+			
+			
+			
+			.content{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height:70%;
+			}
+			.con{
+				width:1200px;
+				height: 60px;
+				display: flex;
+				flex-direction: row;
+				line-height: 60px;
+				background: #fcfcfc;
+			}
+			.content>.con:nth-child(1){
+				width: 1200px;
+				background:#E53140;
+				height: 44px;
+				margin-top:10%;
+				line-height: 44px;
+			}
+			.con>div{
+				text-align: center;
+				color: #000000;
+				font-size:14px;
+			}
+			.content>.con:nth-child(1)>div{
+				color: #FFFFFF;
+				box-sizing: border-box;
+				border-right: 1px solid #FFFFFF;
+			}
+			.dingDan{
+				width:28%;
+				border: 1px solid #FFFFFF;
+			}
+			.shangPin{
+				width:20%;
+				border: 1px solid #FFFFFF;
+			}
+			.shangPin img{
+				width: 34px;
+				height: 46px;
+				display: block;
+				margin: 7px auto 7px;
+			}
+			.jinE{
+				width:20%;
+				border: 1px solid #FFFFFF;
+			}
+			.zhiFu{
+				width:12%;
+				border: 1px solid #FFFFFF;
+			}
+			.caoZuo{
+				width:20%;
+				border: 1px solid #FFFFFF;
+			}
+			.bg1{
+				background: #F3F3F3;
+			}
+			.bg2{
+				background: #FFFFFF;
+			}
+			.con>.caoZuoys1{
+				color:#B0B0B0;
+			}
+			.con>.caoZuoys2{
+				color:#E53140;
+				cursor: pointer;
+			}
+			.btn_pay{
+				/* float: right; */
+				width: 83px;
+				height: 36px;
+				background: #E53140;
+				border-radius: 4px;
+				text-align: center;
+				/* line-height: 36px; */
+				/* font-size: 18px; */
+				color: #FFFFFF;
+				border: none;
+			}
+
+			.disable_pay{
+				/* float: right; */
+				width: 83px;
+				height: 36px;
+				background: #E53140;
+				border-radius: 4px;
+				text-align: center;
+				/* line-height: 36px; */
+				/* font-size: 18px; */
+				color: #FFFFFF;
+				border: none;
+			}

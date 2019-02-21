@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/paySuccess.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="chengGongZhiFu">
+				<div class="header">
+					<div class="title">
+						<div class="miaoSha left"></div>
+						<div class="nav right">
+							<div><a href="index.html">抢购专区</a></div>
+							<div><a href="orderList.html">订单页</a></div>
+							<div><a href="login.html">登录</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<img src="img/weixin.png" />
+					<p>您已成功付款￥<span class="x_jiaGe"></span>元&nbsp;&nbsp;支付订单号：<span class="zhiFuDingDanHao"></span></p>
+					<div class="huiShouYe"><a href="javascript:;">回首页</a></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/common.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+			function fun(f,g){
+				
+				$('.x_jiaGe').html(f);
+				$('.zhiFuDingDanHao').html(g);
+			}
+			fun('1699.00','248293459234');
+		</script>
+
+	</body>
+</html>

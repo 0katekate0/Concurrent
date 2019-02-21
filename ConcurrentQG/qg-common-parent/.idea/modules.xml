@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qg-common-dto/qg-common-dto.iml" filepath="$PROJECT_DIR$/qg-common-dto/qg-common-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-module/qg-common-module.iml" filepath="$PROJECT_DIR$/qg-common-module/qg-common-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-parent.iml" filepath="$PROJECT_DIR$/qg-common-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-service/qg-common-service.iml" filepath="$PROJECT_DIR$/qg-common-service/qg-common-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qg-common-utils/qg-common-utils.iml" filepath="$PROJECT_DIR$/qg-common-utils/qg-common-utils.iml" />
+    </modules>
+  </component>
+</project>

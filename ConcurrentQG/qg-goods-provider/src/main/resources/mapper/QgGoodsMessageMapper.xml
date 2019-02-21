@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qg.mapper.QgGoodsMessageMapper">
+
+    <select id="getQgGoodsMessageById" resultType="com.qg.pojo.QgGoodsMessage">
+        select
+                id as id,
+                userId as userId,
+                goodsId as goodsId,
+                status as status,
+                amount as amount,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from qg_goods_message
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getQgGoodsMessageListByMap" resultType="com.qg.pojo.QgGoodsMessage" parameterType="java.util.Map">
+        select
+                id as id,
+                userId as userId,
+                goodsId as goodsId,
+                status as status,
+                amount as amount,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from qg_goods_message
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="amount != null and amount!=''">
+                    and amount=#{amount}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getQgGoodsMessageCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from qg_goods_message
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="amount != null and amount!=''">
+                    and amount=#{amount}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertQgGoodsMessage" parameterType="com.qg.pojo.QgGoodsMessage">
+        insert into qg_goods_message(
+                        userId,
+                        goodsId,
+                        status,
+                        amount,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{userId},
+                     #{goodsId},
+                     #{status},
+                     #{amount},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateQgGoodsMessage" parameterType="com.qg.pojo.QgGoodsMessage">
+        update qg_goods_message
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="goodsId != null and goodsId!=''">
+                            goodsId=#{goodsId},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="amount != null and amount!=''">
+                            amount=#{amount},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+
+    <delete id="deleteQgGoodsMessageById" parameterType="String">
+        delete from qg_goods_message where id = #{id}
+    </delete>
+
+    <delete id="batchDeleteQgGoodsMessage" parameterType="java.util.Map">
+        delete from qg_goods_message where id in (
+            <foreach collection="ids" item="id" separator=",">
+                    #{id}
+            </foreach>
+        )
+    </delete>
+</mapper>
